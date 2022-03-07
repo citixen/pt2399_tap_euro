@@ -1,5 +1,5 @@
 # pt2399_tap_euro
-A eurorack focused design for an accurate(ish) way to tap tempo/externally clocked delay using the PT2399 delay chip, a Teensy 4.1, MCP41100, MCP41010, 25LC256 EEPROM
+A eurorack focused design for an accurate(ish) way to tap tempo/externally clocked delay using the PT2399 delay chip, a Teensy 4.1, MCP41100, MCP41010, 25LC256 EEPROM and an Adafruit 128x64 OLED SPI display
 
 The code is very messy as this is an old unfinished (but working) project that I just want to make available as an idea. Code was built in the Arduino IDE, so some includes may be specific to that.
 
@@ -36,4 +36,22 @@ After this initialisation is completed, or skipped, we enter the main loop which
 
 In addition, an interrupt is enabled on a pin for a tap input. This is debounced in code. When the interrupt is issued, the delay time gets set to the time since the last tap, output pulses get retriggered, and relevant modifications are recalculated for output drift, and the best matching delay resistance settings are identified.
 Future improvement for this could be to only reset the delay time after x taps?
+
+
+TEENSY PINS : 
+PIN 0 - Divided clock output. 5ms pulse output at same rate as the calculated delay time
+PIN 1 - Clock output. 5ms pulse output as same rate as tap input
+PIN 2 - Tap input. Rising edge detection.
+PIN 3-7 - SPI OLED pins
+PIN 9 - Connects to pin 5 on the PT2399, which provides a measurable frequency output
+PIN 10 - select for 1 digital pot
+PIN 11 - MOSI for digital pots & EEPROM
+PIN 12 - MISO for EEPROM
+PIN 13 - SCK for digital pots and EEPROM
+PIN 14 - select for 2nd digital pot
+PIN 15 - select for EEPROM
+PIN 18 - analog in for beat division selection - potentiometer divider between 3v3 and GND
+PIN 19 - analog in for lfo shape selection - potentiometer divider between 3v3 and GND
+PIN 20 - analog in for lfo depth - potentiometer divider between 3v3 and GND
+PIN 22 - analog in for lfo rate - potentiometer divider between 3v3 and GND
 
