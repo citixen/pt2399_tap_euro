@@ -39,19 +39,19 @@ Future improvement for this could be to only reset the delay time after x taps?
 
 
 TEENSY PINS : 
-PIN 0 - Divided clock output. 5ms pulse output at same rate as the calculated delay time
-PIN 1 - Clock output. 5ms pulse output as same rate as tap input
-PIN 2 - Tap input. Rising edge detection.
-PIN 3-7 - SPI OLED pins
-PIN 9 - Connects to pin 5 on the PT2399, which provides a measurable frequency output
-PIN 10 - select for 1 digital pot
-PIN 11 - MOSI for digital pots & EEPROM
-PIN 12 - MISO for EEPROM
-PIN 13 - SCK for digital pots and EEPROM
-PIN 14 - select for 2nd digital pot
-PIN 15 - select for EEPROM
-PIN 18 - analog in for beat division selection - potentiometer divider between 3v3 and GND
-PIN 19 - analog in for lfo shape selection - potentiometer divider between 3v3 and GND
-PIN 20 - analog in for lfo depth - potentiometer divider between 3v3 and GND
-PIN 22 - analog in for lfo rate - potentiometer divider between 3v3 and GND
+- PIN 0 - Divided clock output. 5ms pulse output at same rate as the calculated delay time
+- PIN 1 - Clock output. 5ms pulse output as same rate as tap input
+- PIN 2 - Tap input. Rising edge detection.
+- PIN 3-7 - SPI OLED pins
+- PIN 9 - Connects to pin 5 on the PT2399, which provides a measurable frequency output
+- PIN 10 - select for 1 digital pot
+- PIN 11 - MOSI for digital pots & EEPROM
+- PIN 12 - MISO for EEPROM
+- PIN 13 - SCK for digital pots and EEPROM
+- PIN 14 - select for 2nd digital pot
+- PIN 15 - select for EEPROM
+- PIN 18 - analog in for beat division selection - potentiometer divider between 3v3 and GND
+- PIN 19 - analog in for lfo shape selection - potentiometer divider between 3v3 and GND
+- PIN 20 - analog in for lfo depth - potentiometer divider between 3v3 and GND
+- PIN 22 - analog in for lfo rate - potentiometer divider between 3v3 and GND
 
